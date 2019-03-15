@@ -2,6 +2,8 @@
 import numpy as np
 import torch
 
+x = torch.randn(1)
+
 a = np.ones(5)
 b = torch.from_numpy(a)
 np.add(a, 1, out = a)
