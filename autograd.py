@@ -7,13 +7,11 @@ y = x + 2
 print(y)
 
 print(y.grad_fn)
-
 z = y * y * 3
 out = z.mean()
-
 print(z, out)
 
-a = torch.randn(2,2)
+a = torch.randn(2, 2)
 a = ((a * 3) / (a - 1))
 print(a.requires_grad)
 a.requires_grad_(True)
@@ -38,6 +36,5 @@ print(x.grad)
 print(x.requires_grad)
 print((x**2).requires_grad)
 
-with torch.no_grad():
-    print((x ** 2).requires_grad)
+print((x ** 2).requires_grad)
 
